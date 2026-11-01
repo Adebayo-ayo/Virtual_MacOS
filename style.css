@@ -8,6 +8,8 @@ img {
   width: 100%;
 }
 body {
+  overflow: hidden;
+
   /* background: linear-gradient(30deg, green, darkblue, purple); */
   background-image:
     linear-gradient(rgba(2, 2, 2, 0.4), rgba(2, 2, 2, 0.631)),
@@ -16,10 +18,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
-  overflow: hidden;
 }
 
 main {
+
   /* border: 2px solid red; */
   width: 100%;
   height: 100vh;
@@ -29,7 +31,6 @@ nav {
   /* border: 1px dashed green; */
   width: 100%;
   height: 30px;
-
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   box-shadow:
@@ -41,13 +42,18 @@ nav {
   border-right-color: #151a1a36;
 }
 .notification_center {
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   position: absolute;
-  right: 1.5%;
+  right: 1%;
   bottom: 2%;
   width: 22%;
-  height: 94vh;
+  height: 94%;
   border-radius: 30px;
-  opacity: 0;
+  opacity: 1;
 
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
@@ -60,27 +66,69 @@ nav {
   border-right-color: #151a1a36;
 }
 
-/* .app_dock {
-  position: absolute;
-  left: 2.5%;
-  bottom: 0;
-  border: 1px dashed green;
-  border-radius: 10px;
-  width: 95%;
-  height: 8vh;
+.season{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  border: 2px solid red;
+  min-height: 50px;
+  width: 98%;
+}
 
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  box-shadow:
-    inset 0 0.5px 0.5px 0 rgba(255, 255, 255, 0.5),
-    0 4px 12px rgba(0, 0, 0, 0.4);
-  border-top-color: solid #dceeef1f;
-  border-bottom-color: #dceeef1f;
-  border-left-color: #19545436;
-  border-right-color: #151a1a36;
-} */
+.calender{
+  border: 2px solid green;
+  width: 48%;
+  height: 160px;
+}
 
-.test {
+.Weather{
+  border: 2px solid green;
+  width: 48%;
+  height: 160px;
+}
+
+.activity_monitor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  border: 2px solid green;
+  min-height: 50px;
+  width: 98%;
+}
+
+.chart{
+  border: 2px solid red;
+  width: 70%;
+  height: 160px;
+}
+
+.app_used{
+  border: 2px solid red;
+  width: 30%;
+  height: 160px;
+}
+
+.connected_device{
+   display: flex;
+   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  border: 2px solid green;
+  height: 450px;
+  width: 98%;
+}
+
+.connected_device p{
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 50px;
+  border-bottom: .5px solid peru;
+}
+
+.hover_bar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,14 +143,14 @@ nav {
   /* border: 2px solid red; */
 }
 
-.test:hover .app_dock1 {
+.hover_bar:hover .app_dock {
   transition: all 0.6s ease;
   scale: 1.009;
   transform: translateY(-40px);
   opacity: 1;
 }
 
-.app_dock1 {
+.app_dock {
   opacity: 0;
   display: flex;
   justify-content: space-around;
@@ -158,7 +206,8 @@ nav {
 }
 
 .app_label {
-  background-color: rgba(196, 218, 255, 0.288);
+  background-color: rgba(1, 9, 21, 0.499);
+  color: wheat;
   font-size: 1rem;
   width: 100px;
   transition: all 0.6s ease;
