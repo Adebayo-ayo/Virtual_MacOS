@@ -59,7 +59,8 @@ nav {
   border-left-color: #19545436;
   border-right-color: #151a1a36;
 }
-.app_dock {
+
+/* .app_dock {
   position: absolute;
   left: 2.5%;
   bottom: 0;
@@ -77,4 +78,108 @@ nav {
   border-bottom-color: #dceeef1f;
   border-left-color: #19545436;
   border-right-color: #151a1a36;
+} */
+
+.test {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 3;
+  left: 2.5%;
+  bottom: 0%;
+  /* border: 1px dashed green; */
+  border-radius: 10px;
+  width: 95%;
+  height: 30px;
+  /* border: 2px solid red; */
 }
+
+.test:hover .app_dock1{
+  transition: all 0.6s ease;
+  scale: 1.009;
+  transform: translateY(-40px);
+  opacity: 1;
+}
+
+.app_dock1 {
+  opacity: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateY(50px);
+  /* border: 1px dashed red; */
+
+  transition: all 0.6s;
+  border-radius: 25px;
+  width: 100%;
+  height: 100px;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  box-shadow:
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.111),
+    0 4px 12px rgba(0, 0, 0, 0.906);
+  border-top: 1px solid rgba(255, 255, 255, 0.111);
+  /* border-right: .5px solid rgba(0, 0, 0, 0.113); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.111);
+  /* border-left: .5px solid rgba(0, 0, 0, 0.113); */
+}
+
+.app_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border: 1px dashed blue; */
+  transition: all 0.6s ease;
+
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+}
+
+.app_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s ease;
+
+  position: relative;
+  /* border: 2px solid red; */
+}
+
+.app_content:has(.texts_demo:hover) .app_label {
+  position: absolute;
+  bottom: 140%;
+  transition: all 0.6s ease;
+  opacity: 1;
+  scale: 1.2;
+  transform: translateY(-10px);
+}
+
+.app_label {
+  background-color: rgba(196, 218, 255, 0.288);
+  font-size: 1rem;
+  width: 100px;
+  transition: all 0.6s ease;
+
+  /* border: 2px solid red; */
+  position: absolute;
+  bottom: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  border-radius: 40px;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  box-shadow:
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.111),
+    0 4px 12px rgba(0, 0, 0, 0.906);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.111);
+  /* border-right: 1.5px solid rgba(0, 0, 0, 0.113); */
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.111);
+  /* border-left: 1.5px solid rgba(0, 0, 0, 0.113); */
+}
+
