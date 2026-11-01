@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+body {
+  /* background: linear-gradient(30deg, green, darkblue, purple); */
+  background-image:
+    linear-gradient(rgba(2, 2, 2, 0.4), rgba(2, 2, 2, 0.631)),
+    url("images/shipbg2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  overflow: hidden;
+}
+
+main {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  /* border: 1px dashed green; */
+  width: 100%;
+  height: 30px;
+
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  box-shadow:
+    inset 0 0.5px 0.5px 0 rgba(255, 255, 255, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+  border-top-color: solid #dceeef1f;
+  border-bottom-color: #dceeef1f;
+  border-left-color: #19545436;
+  border-right-color: #151a1a36;
+}
+.notification_center {
+  position: absolute;
+  right: 1.5%;
+  bottom: 2%;
+  width: 22%;
+  height: 94vh;
+  border-radius: 30px;
+  opacity: 0;
+
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  box-shadow:
+    inset 0 0.5px 0.5px 0 rgba(255, 255, 255, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.4);
+  border-top-color: solid #dceeef1f;
+  border-bottom-color: #dceeef1f;
+  border-left-color: #19545436;
+  border-right-color: #151a1a36;
+}
