@@ -13,12 +13,14 @@ body {
   /* background: linear-gradient(30deg, green, darkblue, purple); */
   background-image:
     linear-gradient(rgba(2, 2, 2, 0.4), rgba(2, 2, 2, 0.631)),
-    url("images/shipbg2.png");
+    url("images/bg.JPG");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
 }
+
+
 
 main {
   /* border: 2px solid red; */
@@ -67,7 +69,7 @@ nav {
   top: 80px; /* Right below your 30px nav bar */
   width: 40px; /* Make your hover trigger zone as small as you want */
   height: 40px;
-border: 1px dashed green;
+/* border: 1px dashed green; */
 }
 
 .hover_notification:hover .notification_center {
@@ -85,9 +87,9 @@ border: 1px dashed green;
   top: 40px;
   transition: all 0.8s ease;
   width: 330px; /* Fixed width so it won't shrink when hover area shrinks */
-  height: calc(100vh - 50px); /* Explicit height */
+  height:94%;
   border-radius: 30px;
-  opacity: 0; /* Set to 0 so it stays hidden until hover */
+  opacity: 0; 
   transform: translateX(400px);
   pointer-events: auto;
 
@@ -123,6 +125,7 @@ border: 1px dashed green;
 
 .activity_monitor {
   display: flex;
+  margin-top: 20px;
   justify-content: space-between;
   align-items: center;
   margin-top: px;
@@ -165,6 +168,7 @@ border: 1px dashed green;
   margin-top: 20px;
   border-radius: 20px;
 }
+
 
 .hover_bar {
   display: flex;
@@ -302,6 +306,14 @@ border: 1px dashed green;
   object-fit: contain;
   pointer-events: none;
   border-radius: inherit;
+}
+
+.texts_demo a {
+ display: flex; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .app_label {
