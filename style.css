@@ -21,7 +21,6 @@ body {
 }
 
 main {
-
   /* border: 2px solid red; */
   width: 100%;
   height: 100vh;
@@ -41,64 +40,97 @@ nav {
   border-left-color: #19545436;
   border-right-color: #151a1a36;
 }
-.notification_center {
 
+/* .notification_center {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
   position: absolute;
   right: 1%;
-  bottom: 2%;
-  width: 22%;
-  height: 94%;
-  border-radius: 30px;
-  opacity: 1;
+  top: 40px;
+  width: 320px;
+  height: calc(100vh - 120px);
+  border-radius: 24px;
+  padding: 16px;
+  gap: 16px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+} */
 
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
+.hover_notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 30px; /* Right below your 30px nav bar */
+  width: 20px; /* Make your hover trigger zone as small as you want */
+  height: calc(100vh - 30px);
+  border: 1px dashed green; /* Visual guide */
+}
+
+.hover_notification:hover .notification_center {
+  transition: all 0.6s ease;
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.notification_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* Fixed position anchors it to the viewport */
+  right: 12px;
+  top: 40px;
+  width: 330px; /* Fixed width so it won't shrink when hover area shrinks */
+  height: calc(100vh - 50px); /* Explicit height */
+  border-radius: 30px;
+  opacity: 0; /* Set to 0 so it stays hidden until hover */
+  transform: translateX(400px);
+  pointer-events: auto;
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   box-shadow:
     inset 0 0.5px 0.5px 0 rgba(255, 255, 255, 0.5),
     0 4px 12px rgba(0, 0, 0, 0.4);
-  border-top-color: solid #dceeef1f;
-  border-bottom-color: #dceeef1f;
-  border-left-color: #19545436;
-  border-right-color: #151a1a36;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.season{
+.season {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  border: 2px solid red;
+  margin-top: 20px;
+  /* border: 2px solid red; */
   min-height: 50px;
-  width: 98%;
+  width: 96%;
 }
 
-.calender{
-  border: 2px solid green;
+.calender {
+  /* border: 2px solid green; */
   width: 48%;
-  height: 160px;
+  min-height: 160px;
 }
 
-.Weather{
-  border: 2px solid green;
+.Weather {
+  /* border: 2px solid green; */
   width: 48%;
-  height: 160px;
+  min-height: 160px;
 }
 
-.activity_monitor{
+.activity_monitor {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  border: 2px solid green;
-  min-height: 50px;
-  width: 98%;
+  margin-top: px;
+  /* border: 2px solid green; */
+  min-height: 100px;
+  width: 96%;
 }
 
-.chart{
+/* .chart{
   border: 2px solid red;
   width: 70%;
   height: 160px;
@@ -108,24 +140,29 @@ nav {
   border: 2px solid red;
   width: 30%;
   height: 160px;
-}
+} */
 
-.connected_device{
-   display: flex;
-   flex-direction: column;
+.connected_device {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 40px;
-  border: 2px solid green;
-  height: 450px;
-  width: 98%;
+  margin-top: 20px;
+  /* border: 2px solid green; */
+  min-height: 450px;
+  width: 96%;
 }
 
-.connected_device p{
+.connected_device p {
   /* border: 2px solid red; */
   width: 90%;
   height: 50px;
-  border-bottom: .5px solid peru;
+  border-bottom: 0.5px solid peru;
+}
+
+.monitor {
+  margin-top: 20px;
+  border-radius: 20px;
 }
 
 .hover_bar {
@@ -161,7 +198,7 @@ nav {
   transition: all 0.6s;
   border-radius: 25px;
   width: 100%;
-  height: 100px;
+  height: 75px;
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   box-shadow:
@@ -237,8 +274,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65px;
-  width: 60px;
+  height: 55px;
+  width: 50px;
   /* opacity: 0.3; */
   transition: all 0.5s ease;
 
@@ -257,6 +294,6 @@ nav {
   transition: all 0.8s ease;
   /* transition: transform .4s ease; */
   opacity: 1;
-  scale: 1.2;
-  transform: translateY(-10px);
+  scale: 1.1;
+  transform: translateY(-5px);
 }
