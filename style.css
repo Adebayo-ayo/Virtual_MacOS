@@ -65,9 +65,9 @@ nav {
   z-index: 3;
   right: 0;
   top: 80px; /* Right below your 30px nav bar */
-  width: 20px; /* Make your hover trigger zone as small as you want */
-  height:40px;
-  /* border: 1px dashed green; Visual guide */
+  width: 40px; /* Make your hover trigger zone as small as you want */
+  height: 40px;
+border: 1px dashed green;
 }
 
 .hover_notification:hover .notification_center {
@@ -271,12 +271,12 @@ nav {
 }
 
 .texts_demo {
-  border-radius: 16px; 
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 55px; 
-  width: 55px;  
+  height: 55px;
+  width: 55px;
   transition: all 0.5s ease;
 
   backdrop-filter: blur(0px);
@@ -286,7 +286,7 @@ nav {
     0 4px 12px rgba(0, 0, 0, 0.906);
   border-top: 1.5px solid rgba(255, 255, 255, 0.111);
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.111);
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .texts_demo:hover {
@@ -299,9 +299,9 @@ nav {
 .texts_demo img {
   width: 65px;
   height: 55px;
-  object-fit: contain; 
+  object-fit: contain;
   pointer-events: none;
-  border-radius: inherit; 
+  border-radius: inherit;
 }
 
 .app_label {
