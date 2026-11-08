@@ -64,10 +64,10 @@ nav {
   position: absolute;
   z-index: 3;
   right: 0;
-  top: 30px; /* Right below your 30px nav bar */
+  top: 80px; /* Right below your 30px nav bar */
   width: 20px; /* Make your hover trigger zone as small as you want */
-  height: calc(100vh - 30px);
-  border: 1px dashed green; /* Visual guide */
+  height:40px;
+  /* border: 1px dashed green; Visual guide */
 }
 
 .hover_notification:hover .notification_center {
@@ -83,6 +83,7 @@ nav {
   position: fixed; /* Fixed position anchors it to the viewport */
   right: 12px;
   top: 40px;
+  transition: all 0.8s ease;
   width: 330px; /* Fixed width so it won't shrink when hover area shrinks */
   height: calc(100vh - 50px); /* Explicit height */
   border-radius: 30px;
@@ -270,13 +271,12 @@ nav {
 }
 
 .texts_demo {
-  border-radius: 20px;
+  border-radius: 16px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 55px;
-  width: 50px;
-  /* opacity: 0.3; */
+  height: 55px; 
+  width: 55px;  
   transition: all 0.5s ease;
 
   backdrop-filter: blur(0px);
@@ -285,15 +285,27 @@ nav {
     inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.111),
     0 4px 12px rgba(0, 0, 0, 0.906);
   border-top: 1.5px solid rgba(255, 255, 255, 0.111);
-  /* border-right: 1.5px solid rgba(0, 0, 0, 0.113); */
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.111);
-  /* border-left: 1.5px solid rgba(0, 0, 0, 0.113); */
+  overflow: hidden; 
 }
 
 .texts_demo:hover {
   transition: all 0.8s ease;
-  /* transition: transform .4s ease; */
   opacity: 1;
   scale: 1.1;
   transform: translateY(-5px);
+}
+
+.texts_demo img {
+  width: 65px;
+  height: 55px;
+  object-fit: contain; 
+  pointer-events: none;
+  border-radius: inherit; 
+}
+
+.app_label {
+  white-space: nowrap;
+  width: auto;
+  padding: 0 12px;
 }
