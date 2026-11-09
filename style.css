@@ -13,25 +13,29 @@ body {
   /* background: linear-gradient(30deg, green, darkblue, purple); */
   background-image:
     linear-gradient(rgba(2, 2, 2, 0.4), rgba(2, 2, 2, 0.631)),
-    url("images/bg.JPG");
+    url("images/bg2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: black;
 }
 
-
-
 main {
-  /* border: 2px solid red; */
   width: 100%;
   height: 100vh;
 }
 
 nav {
-  /* border: 1px dashed green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid red; */
   width: 100%;
-  height: 30px;
+  height: 40px;
+  opacity: 0;
+  transition: all 0.6s ease;
+  transform: translateY(-40px);
+
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
   box-shadow:
@@ -43,21 +47,83 @@ nav {
   border-right-color: #151a1a36;
 }
 
-/* .notification_center {
+.nav_cover:hover nav {
+  transition: all 0.6s ease;
+  scale: 1.009;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.logo img {
+  height: auto;
+  width: 20px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.leftparent {
+  margin-left: 20px;
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 1%;
-  top: 40px;
-  width: 320px;
-  height: calc(100vh - 120px);
-  border-radius: 24px;
-  padding: 16px;
+  align-items: center;
   gap: 16px;
-  backdrop-filter: blur(25px);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-} */
+}
+
+.shortcuts {
+  /* border: 2px solid blue; */
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.right-container {
+  /* border: 2px solid orange; */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.battery {
+  /* border: 2px solid red; */
+  height: 60px;
+  width: 40px;
+}
+
+.battery img {
+  /* border: 2px solid red; */
+  height: 60px;
+  width: auto;
+  object-fit: cover;
+}
+
+.right-container img {
+  /* border: 2px solid red; */
+
+  height: auto;
+  width: 20px;
+  object-fit: cover;
+  /* cursor: pointer; */
+}
+
+.dynamic_island {
+  /* border: 2px solid blue; */
+
+  position: absolute;
+  top: 2.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.dynamic_island img {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}
 
 .hover_notification {
   display: flex;
@@ -66,10 +132,10 @@ nav {
   position: absolute;
   z-index: 3;
   right: 0;
-  top: 80px; /* Right below your 30px nav bar */
-  width: 40px; /* Make your hover trigger zone as small as you want */
+  top: 80px;
+  width: 40px;
   height: 40px;
-/* border: 1px dashed green; */
+  /* border: 1px dashed green; */
 }
 
 .hover_notification:hover .notification_center {
@@ -82,14 +148,14 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed; /* Fixed position anchors it to the viewport */
+  position: fixed;
   right: 12px;
   top: 40px;
   transition: all 0.8s ease;
-  width: 330px; /* Fixed width so it won't shrink when hover area shrinks */
-  height:94%;
+  width: 330px;
+  height: 94%;
   border-radius: 30px;
-  opacity: 0; 
+  opacity: 0;
   transform: translateX(400px);
   pointer-events: auto;
 
@@ -161,14 +227,13 @@ nav {
   /* border: 2px solid red; */
   width: 90%;
   height: 50px;
-  border-bottom: 0.5px solid peru;
+  /* border-bottom: 0.5px solid peru; */
 }
 
 .monitor {
   margin-top: 20px;
   border-radius: 20px;
 }
-
 
 .hover_bar {
   display: flex;
@@ -309,7 +374,7 @@ nav {
 }
 
 .texts_demo a {
- display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
